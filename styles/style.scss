@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  padding: 0 20% 10% 20%;
+  background: #AAA;
+  color: #FFF;
+
+  .header-content {
+    margin-top: 15%;
+    h1 {
+      font-size: 4rem;
+    }
+    h1, p {
+      margin: 0;
+    }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 5% 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+    li {
+      display: inline;
+      list-style: none;
+    }
+  }
+}
+
+#projects {
+  padding: 5% 20% 0 20%;
+  display: grid;
+  grid-template-rows: 1fr, repeat(3, 3fr);
+   .project {
+    display: grid;
+    grid-template-areas:
+    'project-image project-image project-title'
+    'project-image project-image project-description';
+    padding-bottom: 2.5%;
+    border-bottom: 1px solid #AAA;
+    img {
+      width: 75%;
+      grid-area: project-image;
+    }
+    h3 {
+      grid-area: project-title;
+      align-self: flex-end;
+    }
+    p {
+      grid-area: project-description;
+    }
+  }
+}
+
+#contact {
+  padding: 5% 20% 0 20%;
+}
+
+footer {
+  display: grid;
+  place-items: center;
+}
