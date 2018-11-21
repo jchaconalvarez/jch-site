@@ -34,6 +34,9 @@ header {
   padding: 0 5% 50% 5%;
   background: #140a29;
 }
+header .brand img {
+  height: 5rem;
+}
 header .header-content {
   margin-top: 15%;
 }
@@ -56,6 +59,9 @@ header nav {
   padding: 5% 0;
   font-size: 0.7rem;
   font-weight: bold;
+}
+header nav ul {
+  padding: 0;
 }
 header nav li {
   display: inline;
@@ -88,7 +94,8 @@ header nav li:first-child {
 }
 #projects .project img {
   grid-area: project-image;
-  place-self: center flex-start;
+  place-self: center flex-end;
+  padding-right: 10%;
   width: 5rem;
 }
 #projects .project h2 {
@@ -129,7 +136,7 @@ header nav li:first-child {
 @media screen and (min-width: 768px) {
   header {
     width: 100%;
-    padding-bottom: 50%;
+    padding-bottom: 30%;
   }
   header nav {
     font-size: 1rem;

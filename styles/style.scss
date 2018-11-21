@@ -48,7 +48,11 @@ header {
   display: grid;
   padding: 0 5% 50% 5%;
   background: $background-color;
-
+  .brand {
+    img {
+      height: 5rem;
+    }
+  }
   .header-content {
     margin-top: 15%;
     h1 {
@@ -72,6 +76,10 @@ header {
     padding: 5% 0;
     font-size: 0.7rem;
     font-weight: bold;
+    
+    ul {
+      padding: 0;
+    }
 
     li {
       display: inline;
@@ -110,7 +118,8 @@ header {
 
     img {
       grid-area: project-image;
-      place-self: center flex-start;
+      place-self: center flex-end;
+      padding-right: 10%;
       width: 5rem;
     }
 
@@ -160,7 +169,7 @@ header {
 @media screen and (min-width: 768px) {
   header {
     width: 100%;
-    padding-bottom: 50%;
+    padding-bottom: 30%;
     nav {
       font-size: 1rem;
       li {
