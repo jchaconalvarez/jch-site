@@ -1,11 +1,22 @@
 /* IMPORTS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 /* COLORS */
-body {
-  margin: 0;
-  font-size: 16px;
+html {
+  font-size: 14px;
   font-family: "Montserrat", sans-serif;
   color: white;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  overflow-x: hidden;
+  width: 100%;
 }
 body a {
   text-decoration: none;
@@ -19,8 +30,9 @@ body li {
 }
 
 header {
+  display: grid;
   padding: 0 5% 50% 5%;
-  background: #140A29;
+  background: #140a29;
 }
 header .header-content {
   margin-top: 15%;
@@ -29,28 +41,29 @@ header .header-content h1 {
   font-size: 4rem;
 }
 header .header-content h1 span {
-  color: #DAA520;
+  color: #daa520;
 }
-header .header-content h1, header .header-content p {
-  margin: 0;
+header .header-content h1,
+header .header-content p {
+  margin: 0 auto;
 }
 header .header-content p {
-  color: #FFFFFFCC;
+  color: #ffffffcc;
 }
 header nav {
   display: flex;
   justify-content: space-between;
   padding: 5% 0;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 header nav li {
   display: inline;
   list-style: none;
-  margin-left: 1rem;
+  margin-right: 0.25rem;
 }
 header nav li:first-child {
-  border-bottom: 3px solid #DAA520;
+  border-bottom: 3px solid #daa520;
   padding-bottom: 0.5rem;
 }
 
@@ -59,61 +72,109 @@ header nav li:first-child {
   display: grid;
   justify-items: center;
   grid-template-rows: 1fr;
+  grid-gap: 2.5%;
 }
 #projects h1 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   color: #231147;
   text-transform: uppercase;
-  border-bottom: 5px solid #DAA520;
+  border-bottom: 5px solid #daa520;
   padding-bottom: 0.5rem;
 }
 #projects .project {
   display: grid;
-  grid-template-areas: "project-image project-title" "project-image project-description";
-  width: 100%;
-  padding: 3%;
+  grid-template-areas: "project-image project-title" "project-description project-description";
+  justify-items: center;
 }
 #projects .project img {
   grid-area: project-image;
-  justify-self: flex-end;
-  width: 20rem;
+  place-self: center flex-start;
+  width: 5rem;
 }
 #projects .project h2 {
   grid-area: project-title;
-  align-self: flex-end;
+  place-self: center flex-start;
+  justify-self: flex-start;
   margin-bottom: 0.25rem;
-  padding-left: 10%;
   color: #231147;
 }
 #projects .project p {
   grid-area: project-description;
-  color: #AAA;
-  padding-left: 10%;
-  max-width: 50%;
+  padding: 0 5%;
+  color: #aaa;
+  text-align: center;
 }
 
 #contact {
+  width: 100%;
   margin-top: 5%;
-  padding: 5% 20%;
-  background: #140A29;
+  background: #140a29;
+  display: grid;
 }
 #contact ul {
+  padding: 0;
+  width: 66%;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+  justify-items: center;
+  justify-self: center;
+  grid-template-columns: 1fr 1fr 1fr;
   font-size: 2.5rem;
 }
 
-footer {
-  display: grid;
-  place-items: center;
-  height: 2.5%;
-  background: #140A29;
-  font-size: 0.75rem;
-}
-
 @media screen and (min-width: 321px) {
-  header .header-content h1 {
-    font-size: 6rem;
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  header {
+    width: 100%;
+    padding-bottom: 50%;
+  }
+  header nav {
+    font-size: 1rem;
+  }
+  header nav li {
+    margin-right: 1.5rem;
+  }
+  header .header-content {
+    max-width: 66%;
+  }
+
+  .container {
+    width: 80%;
+    justify-self: center;
+  }
+
+  #projects {
+    padding: 0 10% 10% 10%;
+  }
+  #projects h1 {
+    font-size: 2.75rem;
+  }
+  #projects .project {
+    width: 100%;
+    grid-template-areas: "project-image project-title" "project-image project-description";
+  }
+  #projects .project img {
+    width: 15rem;
+  }
+  #projects .project h2 {
+    place-self: flex-end flex-start;
+    padding: 0 5%;
+  }
+  #projects .project p {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1366px) {
+  html {
+    font-size: 24px;
+  }
+
+  header {
+    width: 100%;
+    padding-bottom: 15%;
   }
 }
 
