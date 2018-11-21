@@ -34,6 +34,9 @@ header {
   padding: 0 5% 50% 5%;
   background: #140a29;
 }
+header .brand img {
+  height: 5rem;
+}
 header .header-content {
   margin-top: 15%;
 }
