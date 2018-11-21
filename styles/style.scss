@@ -1,41 +1,53 @@
+/* IMPORTS */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+/* COLORS */
+$background-color: #140A29;
+$heading-color: #231147;
+$header-paragraph-color: #FFFFFFCC;
+$paragraph-color: #AAA;
+$accent-color: #DAA520;
+
 html {
-  scroll-behavior: smooth;
 }
 
 body {
-  height: 100vh;
   margin: 0;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
+  color: white;
+
   a {
     text-decoration: none;
     color: inherit;
+    &:hover {
+      opacity: 0.8;
+    }
   }
+
   li {
     list-style: none;
   }
 }
 
 header {
-  padding: 0 20% 10% 20%;
-  background: #140A29;
-  color: #FFF;
+  // padding: 0 20% 50% 20%;
+  padding: 0 5% 50% 5%;
+  background: $background-color;
 
   .header-content {
     margin-top: 15%;
     h1 {
       font-size: 4rem;
       span {
-        color: goldenrod;
+        color: $accent-color;
       }
     }
     h1, p {
       margin: 0;
     }
     p {
-      color: #FFFFFFCC;
+      color: $header-paragraph-color;
     }
   }
 
@@ -52,7 +64,7 @@ header {
       margin-left: 1rem;
 
       &:first-child {
-        border-bottom: 3px solid goldenrod;
+        border-bottom: 3px solid $accent-color;
         padding-bottom: 0.5rem;
       }
     }
@@ -64,13 +76,15 @@ header {
   display: grid;
   justify-items: center;
   grid-template-rows: 1fr;
+
   h1 {
     font-size: 2.25rem;
-    color: #231147;
+    color: $heading-color;
     text-transform: uppercase;
-    border-bottom: 5px solid goldenrod;
+    border-bottom: 5px solid $accent-color;
     padding-bottom: 0.5rem;
   }
+
   .project {
     display: grid;
     grid-template-areas:
@@ -90,12 +104,12 @@ header {
       align-self: flex-end;
       margin-bottom: 0.25rem;
       padding-left: 10%;
-      color: #231147;
+      color: $heading-color;
     }
 
     p {
       grid-area: project-description;
-      color: #555;
+      color: $paragraph-color;
       padding-left: 10%;
       max-width: 50%;
     }
@@ -105,8 +119,8 @@ header {
 #contact {
   margin-top: 5%;
   padding: 5% 20%;
-  background: #140A29;
-  color: #FFF;
+  background: $background-color;
+
   ul {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
@@ -118,7 +132,17 @@ footer {
   display: grid;
   place-items: center;
   height: 2.5%;
-  background: #140A29;
+  background: $background-color;
   font-size: 0.75rem;
-  color: #FFF;
+}
+
+
+@media screen and (min-width: 321px) {
+  header {
+    .header-content {
+      h1 {
+        font-size: 6rem;
+      }
+    }
+  }
 }

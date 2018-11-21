@@ -1,26 +1,26 @@
+/* IMPORTS */
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-html {
-  scroll-behavior: smooth;
-}
-
+/* COLORS */
 body {
-  height: 100vh;
   margin: 0;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  color: white;
 }
 body a {
   text-decoration: none;
   color: inherit;
+}
+body a:hover {
+  opacity: 0.8;
 }
 body li {
   list-style: none;
 }
 
 header {
-  padding: 0 20% 10% 20%;
+  padding: 0 5% 50% 5%;
   background: #140A29;
-  color: #FFF;
 }
 header .header-content {
   margin-top: 15%;
@@ -29,7 +29,7 @@ header .header-content h1 {
   font-size: 4rem;
 }
 header .header-content h1 span {
-  color: goldenrod;
+  color: #DAA520;
 }
 header .header-content h1, header .header-content p {
   margin: 0;
@@ -50,7 +50,7 @@ header nav li {
   margin-left: 1rem;
 }
 header nav li:first-child {
-  border-bottom: 3px solid goldenrod;
+  border-bottom: 3px solid #DAA520;
   padding-bottom: 0.5rem;
 }
 
@@ -64,7 +64,7 @@ header nav li:first-child {
   font-size: 2.25rem;
   color: #231147;
   text-transform: uppercase;
-  border-bottom: 5px solid goldenrod;
+  border-bottom: 5px solid #DAA520;
   padding-bottom: 0.5rem;
 }
 #projects .project {
@@ -87,7 +87,7 @@ header nav li:first-child {
 }
 #projects .project p {
   grid-area: project-description;
-  color: #555;
+  color: #AAA;
   padding-left: 10%;
   max-width: 50%;
 }
@@ -96,7 +96,6 @@ header nav li:first-child {
   margin-top: 5%;
   padding: 5% 20%;
   background: #140A29;
-  color: #FFF;
 }
 #contact ul {
   display: grid;
@@ -110,7 +109,12 @@ footer {
   height: 2.5%;
   background: #140A29;
   font-size: 0.75rem;
-  color: #FFF;
+}
+
+@media screen and (min-width: 321px) {
+  header .header-content h1 {
+    font-size: 6rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
