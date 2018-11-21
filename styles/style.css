@@ -1,14 +1,25 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   margin: 0;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
 }
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+body li {
+  list-style: none;
+}
 
 header {
   padding: 0 20% 10% 20%;
-  background: #AAA;
+  background: #140A29;
   color: #FFF;
 }
 header .header-content {
@@ -17,8 +28,14 @@ header .header-content {
 header .header-content h1 {
   font-size: 4rem;
 }
+header .header-content h1 span {
+  color: goldenrod;
+}
 header .header-content h1, header .header-content p {
   margin: 0;
+}
+header .header-content p {
+  color: #FFFFFFCC;
 }
 header nav {
   display: flex;
@@ -30,38 +47,70 @@ header nav {
 header nav li {
   display: inline;
   list-style: none;
+  margin-left: 1rem;
+}
+header nav li:first-child {
+  border-bottom: 3px solid goldenrod;
+  padding-bottom: 0.5rem;
 }
 
 #projects {
-  padding: 5% 20% 0 20%;
+  padding-top: 5%;
   display: grid;
-  grid-template-rows: 1fr, repeat(3, 3fr);
+  justify-items: center;
+  grid-template-rows: 1fr;
+}
+#projects h1 {
+  font-size: 2.25rem;
+  color: #231147;
+  text-transform: uppercase;
+  border-bottom: 5px solid goldenrod;
+  padding-bottom: 0.5rem;
 }
 #projects .project {
   display: grid;
-  grid-template-areas: "project-image project-image project-title" "project-image project-image project-description";
-  padding-bottom: 2.5%;
-  border-bottom: 1px solid #AAA;
+  grid-template-areas: "project-image project-title" "project-image project-description";
+  width: 100%;
+  padding: 3%;
 }
 #projects .project img {
-  width: 75%;
   grid-area: project-image;
+  justify-self: flex-end;
+  width: 20rem;
 }
-#projects .project h3 {
+#projects .project h2 {
   grid-area: project-title;
   align-self: flex-end;
+  margin-bottom: 0.25rem;
+  padding-left: 10%;
+  color: #231147;
 }
 #projects .project p {
   grid-area: project-description;
+  color: #555;
+  padding-left: 10%;
+  max-width: 50%;
 }
 
 #contact {
-  padding: 5% 20% 0 20%;
+  margin-top: 5%;
+  padding: 5% 20%;
+  background: #140A29;
+  color: #FFF;
+}
+#contact ul {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr;
+  font-size: 2.5rem;
 }
 
 footer {
   display: grid;
   place-items: center;
+  height: 2.5%;
+  background: #140A29;
+  font-size: 0.75rem;
+  color: #FFF;
 }
 
 /*# sourceMappingURL=style.css.map */
